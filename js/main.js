@@ -1,49 +1,53 @@
 $(document).ready(function(){
-    
-    $('.galeria').bxSlider({
-        mode: 'fade',
-        captions: true,
-        slideWidth: 1200
-    });
+    //sidebar
+    if(window.location.href.indexOf("index") > -1){
+        $('.galeria').bxSlider({
+            mode: 'fade',
+            captions: true,
+            slideWidth: 1200
+        });
+    }    
 
     //Posts
-    var posts=[
-        {
-            title: "Prueba de titulo 1",
-            Date: "Publicado el dia " + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium fusce id. Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris sit amet massa vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Gravida rutrum quisque non tellus orci ac auctor augue. Id donec ultrices tincidunt arcu non sodales neque. Aliquam sem et tortor consequat id porta nibh venenatis cras. Habitant morbi tristique senectus et netus et malesuada fames. Sollicitudin nibh sit amet commodo. Feugiat pretium nibh ipsum consequat nisl vel. Faucibus in ornare quam viverra orci. Sed turpis tincidunt id aliquet risus feugiat. Ut sem nulla pharetra diam sit amet."
-        },
-        {
-            title: "Prueba de titulo 2",
-            Date: "Publicado el dia " + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium fusce id. Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris sit amet massa vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Gravida rutrum quisque non tellus orci ac auctor augue. Id donec ultrices tincidunt arcu non sodales neque. Aliquam sem et tortor consequat id porta nibh venenatis cras. Habitant morbi tristique senectus et netus et malesuada fames. Sollicitudin nibh sit amet commodo. Feugiat pretium nibh ipsum consequat nisl vel. Faucibus in ornare quam viverra orci. Sed turpis tincidunt id aliquet risus feugiat. Ut sem nulla pharetra diam sit amet."
-        },
-        {
-            title: "Prueba de titulo 3",
-            Date: "Publicado el dia " + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium fusce id. Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris sit amet massa vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Gravida rutrum quisque non tellus orci ac auctor augue. Id donec ultrices tincidunt arcu non sodales neque. Aliquam sem et tortor consequat id porta nibh venenatis cras. Habitant morbi tristique senectus et netus et malesuada fames. Sollicitudin nibh sit amet commodo. Feugiat pretium nibh ipsum consequat nisl vel. Faucibus in ornare quam viverra orci. Sed turpis tincidunt id aliquet risus feugiat. Ut sem nulla pharetra diam sit amet."
-        },
-        {
-            title: "Prueba de titulo 4",
-            Date: new Date(),
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium fusce id. Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris sit amet massa vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Gravida rutrum quisque non tellus orci ac auctor augue. Id donec ultrices tincidunt arcu non sodales neque. Aliquam sem et tortor consequat id porta nibh venenatis cras. Habitant morbi tristique senectus et netus et malesuada fames. Sollicitudin nibh sit amet commodo. Feugiat pretium nibh ipsum consequat nisl vel. Faucibus in ornare quam viverra orci. Sed turpis tincidunt id aliquet risus feugiat. Ut sem nulla pharetra diam sit amet."
-        },
-    ];
+    if(window.location.href.indexOf("index") > -1){
+        var posts=[
+            {
+                title: "Prueba de titulo 1",
+                Date: "Publicado el dia " + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
+                content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium fusce id. Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris sit amet massa vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Gravida rutrum quisque non tellus orci ac auctor augue. Id donec ultrices tincidunt arcu non sodales neque. Aliquam sem et tortor consequat id porta nibh venenatis cras. Habitant morbi tristique senectus et netus et malesuada fames. Sollicitudin nibh sit amet commodo. Feugiat pretium nibh ipsum consequat nisl vel. Faucibus in ornare quam viverra orci. Sed turpis tincidunt id aliquet risus feugiat. Ut sem nulla pharetra diam sit amet."
+            },
+            {
+                title: "Prueba de titulo 2",
+                Date: "Publicado el dia " + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
+                content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium fusce id. Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris sit amet massa vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Gravida rutrum quisque non tellus orci ac auctor augue. Id donec ultrices tincidunt arcu non sodales neque. Aliquam sem et tortor consequat id porta nibh venenatis cras. Habitant morbi tristique senectus et netus et malesuada fames. Sollicitudin nibh sit amet commodo. Feugiat pretium nibh ipsum consequat nisl vel. Faucibus in ornare quam viverra orci. Sed turpis tincidunt id aliquet risus feugiat. Ut sem nulla pharetra diam sit amet."
+            },
+            {
+                title: "Prueba de titulo 3",
+                Date: "Publicado el dia " + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
+                content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium fusce id. Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris sit amet massa vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Gravida rutrum quisque non tellus orci ac auctor augue. Id donec ultrices tincidunt arcu non sodales neque. Aliquam sem et tortor consequat id porta nibh venenatis cras. Habitant morbi tristique senectus et netus et malesuada fames. Sollicitudin nibh sit amet commodo. Feugiat pretium nibh ipsum consequat nisl vel. Faucibus in ornare quam viverra orci. Sed turpis tincidunt id aliquet risus feugiat. Ut sem nulla pharetra diam sit amet."
+            },
+            {
+                title: "Prueba de titulo 4",
+                Date: new Date(),
+                content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium fusce id. Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris sit amet massa vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Gravida rutrum quisque non tellus orci ac auctor augue. Id donec ultrices tincidunt arcu non sodales neque. Aliquam sem et tortor consequat id porta nibh venenatis cras. Habitant morbi tristique senectus et netus et malesuada fames. Sollicitudin nibh sit amet commodo. Feugiat pretium nibh ipsum consequat nisl vel. Faucibus in ornare quam viverra orci. Sed turpis tincidunt id aliquet risus feugiat. Ut sem nulla pharetra diam sit amet."
+            },
+        ];
 
-    posts.forEach((item, index)=>{
-        var post =`
-            <article class="post">
-                <h2>${item.title}</h2>
-            <span class="date">${item.Date}</span>
-            <p>
-                ${item.content}
-            </p>
-            <a href="#" class="button-more">Leer Mas</a>
-        </article>
-        `;
+        posts.forEach((item, index)=>{
+            var post =`
+                <article class="post">
+                    <h2>${item.title}</h2>
+                <span class="date">${item.Date}</span>
+                <p>
+                    ${item.content}
+                </p>
+                <a href="#" class="button-more">Leer Mas</a>
+            </article>
+            `;
 
-        $("#posts").append(post)
-    })
+            $("#posts").append(post)
+        })
+    }
 
     //selector de tema
     var theme = $("#theme")
@@ -95,6 +99,10 @@ $(document).ready(function(){
             localStorage.removeItem("form_name");
             location.reload()
         })
+   }
+
+   if(window.location.href.indexOf("about") > -1){
+    $("#acordeon").accordion()
    }
  
 });
