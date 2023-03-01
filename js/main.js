@@ -44,11 +44,10 @@ $(document).ready(function(){
 
         $("#posts").append(post)
     })
-    
+
     //selector de tema
     var theme = $("#theme")
-    var themeSelect;
-
+    
     theme.attr("href", localStorage.getItem("themeSelect"))
     
     $("#to-green").click(function(){
@@ -66,5 +65,14 @@ $(document).ready(function(){
         localStorage.setItem("themeSelect", "css/blue.css");
     })
 
-    console.log(themeSelect);
+   //scroll arriba de la web
+   $(".subir").click(function(e){
+    e.preventDefault();
+
+    $("html, body").animate({
+        scrollTop: 0,
+    }, 500)
+   })
+   return false;
+
 });
