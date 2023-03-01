@@ -44,4 +44,27 @@ $(document).ready(function(){
 
         $("#posts").append(post)
     })
+    
+    //selector de tema
+    var theme = $("#theme")
+    var themeSelect;
+
+    theme.attr("href", localStorage.getItem("themeSelect"))
+    
+    $("#to-green").click(function(){
+        theme.attr("href", "css/green.css")
+        localStorage.setItem("themeSelect", "css/green.css");
+    })
+
+    $("#to-red").click(function(){
+        theme.attr("href", "css/red.css")
+        localStorage.setItem("themeSelect", "css/red.css");
+    })
+
+    $("#to-blue").click(function(){
+        theme.attr("href", "css/blue.css")
+        localStorage.setItem("themeSelect", "css/blue.css");
+    })
+
+    console.log(themeSelect);
 });
