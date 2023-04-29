@@ -113,4 +113,18 @@ $(document).ready(function(){
     },1000)
    }
  
+   //cargando el validador del formulario
+   if(window.location.href.indexOf("contact") > -1){
+    
+    $("form input[name='date']").datepicker({
+        dateFormat: "dd-mm-yy"
+    });
+    
+    $.validate({
+        lang: "es",
+        errorMessagePosition: "top",
+        scrollToTopOnError: true
+    });
+   }
+ 
 });

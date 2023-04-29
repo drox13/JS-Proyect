@@ -10,18 +10,20 @@
         
         <!--JQquery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
         
-        <!--Slider-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.min.css">
+        <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.theme.min.css">
+
+        <script type="text/javascript" src="js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+
+        <!--Plugin validacion de formulario-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+        
         <!--Mis Scrips-->
         <script type="text/javascript" src="js/main.js"></script>
         
-        <!--Moment-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/locale/es.js"></script>
-
-
     </head>
     <body>
         <div id="selector-theme">
@@ -48,25 +50,42 @@
                 </nav>
             </header>
             
-            <!--Slider-->
-            <div id="slider">
-                <div class="galeria">
-                    <div><img src="../img/hojas.jpg" title="Funky roots"></div>
-                    <div><img src="../img/rojo.jpg" title="The long and winding road"></div>
-                    <div><img src="../img/cielo.jpg" title="Happy trees"></div>
-                  </div>
-            </div>
             <!--Contenido-->
             <selection id="content">
-                <div id="posts">
-                    <!--se cargan los post desde un js-->   
+                <div id="box">
+                    <!--Cargar formulario-->
+                    <h2>Contacto</h2>
+                    <form action="" method="post" id="form_contant">
+                       <label for="name" data-validation="alphanumeric" data-validation="required">Nombre</label>
+                       <input type="text" name="name">
+
+                       <label for="surname" data-validation="alphanumeric" data-validation="required">Apellidos</label>
+                       <input type="text" name="surname">
+                       
+                       <label for="email" data-validation="email">Email</label>
+                       <input type="email" name="email">
+
+                       <label for="sex">Sexo</label>
+                       <select name="sex" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="woman">Mujer</option>
+                       </select>
+
+                       <label for="date">Fecha de nacimiento</label>
+                       <input type="text" name="date"  data-validation="date" data-validation-format="dd-mm-yy">
+
+                       <label for="years">Edad</label>
+                       <input type="number" name="years"  data-validation="number">
+
+                       <input type="submit" value="Enviar">
+                    </form>
                 </div>
                 <!--Sidebar-->
                 <aside id="sidebar">
                     <div id="about">
                         <h4><span>¿Quien soy?</span></h4>
                         <img src="../img/caracol.jpg">
-                        <p>                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium fusce id. Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris sit amet massa vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Gravida rutrum quisque non tellus orci ac auctor augue. Id donec ultrices tincidunt arcu non sodales neque. Aliquam sem et tortor consequat id porta nibh venenatis cras. Habitant morbi tristique senectus et netus et malesuada fames. Sollicitudin nibh sit amet commodo. Feugiat pretium nibh ipsum consequat nisl vel. Faucibus in ornare quam viverra orci. Sed turpis tincidunt id aliquet risus feugiat. Ut sem nulla pharetra diam sit amet.
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium fusce id. Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris sit amet massa vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Gravida rutrum quisque non tellus orci ac auctor augue. Id donec ultrices tincidunt arcu non sodales neque. Aliquam sem et tortor consequat id porta nibh venenatis cras. Habitant morbi tristique senectus et netus et malesuada fames. Sollicitudin nibh sit amet commodo. Feugiat pretium nibh ipsum consequat nisl vel. Faucibus in ornare quam viverra orci. Sed turpis tincidunt id aliquet risus feugiat. Ut sem nulla pharetra diam sit amet.
                         </p>
                     </div>
 
